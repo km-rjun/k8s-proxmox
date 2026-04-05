@@ -82,5 +82,9 @@
   };
   boot.kernelModules = [ "br_netfilter" "overlay" ];
 
+  environment.sessionVariables = {
+    KUBECONFIG = "/etc/rancher/k3s/k3s.yaml";
+  };
+
   system.stateVersion = "24.11";
 }
