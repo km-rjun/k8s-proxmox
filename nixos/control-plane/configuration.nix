@@ -16,7 +16,7 @@
     useDHCP = false;
     interfaces.eth0 = {
       ipv4.addresses = [{
-        address = "";
+        address = "IP_ADDRESS";
         prefixLength = 24;
       }];
     };
