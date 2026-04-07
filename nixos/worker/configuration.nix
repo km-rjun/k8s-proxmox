@@ -63,17 +63,17 @@
 
   services.k3s = {
     enable = true;
-    role = "server";
-
+    role = "agent";
+    serverAddr = "https://10.0.0.130:6443";
+    # Get this token from the control plane:
+    # sudo cat /var/lib/rancher/k3s/server/node-token
+    token = "TOKEN";
     extraFlags = toString [
       "--node-ip=IP_ADDRESS"
-      "--advertise-address=IP_ADDRESS"
-      "--tls-san=IP_ADDRESS"
-      "--disable=traefik"
-      "--flannel-iface=eth0"
-      "--write-kubeconfig-mode=644"
+      "--flannel-iface=eht0"
     ];
   };
+
 
   boot.kernel.sysctl = {
     "net.ipv4.ip_forward" = 1;
