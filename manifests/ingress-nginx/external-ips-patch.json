@@ -1,0 +1,12 @@
+[
+  {
+    "op": "replace",
+    "path": "/spec/type",
+    "value": "NodePort"
+  },
+  {
+    "op": "add",
+    "path": "/spec/externalIPs",
+    "value": ["10.0.0.131", "10.0.0.132"]
+  }
+]
