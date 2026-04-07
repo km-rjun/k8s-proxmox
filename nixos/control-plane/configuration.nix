@@ -66,9 +66,9 @@
     role = "server";
 
     extraFlags = toString [
-      "--node-ip=10.0.0.130"
-      "--advertise-address=10.0.0.130"
-      "--tls-san=10.0.0.130"
+      "--node-ip="
+      "--advertise-address="
+      "--tls-san="
       "--disable=traefik"
       "--flannel-iface=eth0"
       "--write-kubeconfig-mode=644"
