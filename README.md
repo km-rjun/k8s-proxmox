@@ -2,8 +2,6 @@
 
 A step-by-step guide to building a production-ready Kubernetes cluster on NixOS VMs running on Proxmox, using k3s, NGINX ingress, and Cloudflare Tunnel.
 
-This is a living document — hardening steps (network policies, resource limits, pod security) will be added as the project evolves.
-
 ## Cluster Layout
 
 | Node | VM ID | IP | Role |
