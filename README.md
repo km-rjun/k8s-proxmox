@@ -12,10 +12,18 @@ A step-by-step guide to building a production-ready Kubernetes cluster on NixOS 
 
 ## Stack
 
-- **NixOS** — entire system config lives in one file, fully reproducible, perfect for documenting and sharing
-- **k3s** — bundles etcd, API server, scheduler into one binary, handles certs automatically
-- **Cloudflare Tunnel** — works behind CGNAT, no port forwarding needed, free DDoS protection
-- **NGINX Ingress** — gives full routing control inside the cluster, easy to extend
+- **Hypervisor** — Proxmox VE
+- **OS** — NixOS
+- **Ingress** — NGINX Ingress Controller
+- **Tunnel** — Cloudflare Tunnel
+- **TLS** — cert-manager
+
+## Why this stack
+
+- **NixOS** — Entire system config lives in one file, fully reproducible, perfect for documenting and sharing
+- **k3s** — Bundles etcd, API server, scheduler into one binary, handles certs automatically
+- **Cloudflare Tunnel** — Works behind CGNAT, no port forwarding needed, free DDoS protection
+- **NGINX Ingress** — Gives full routing control inside the cluster, easy to extend
 
 ## Documentation
 
