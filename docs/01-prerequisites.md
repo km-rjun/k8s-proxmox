@@ -20,7 +20,9 @@
 - Proxmox VE installed and accessible via its web interface
 - A NixOS minimal ISO (x86_64) available in Proxmox storage
   - Download from the official NixOS website
-  - Upload via:
+  - Upload via: Proxmox → Node → Storage → ISO Images → Upload
+
+    
 
 ---
 
