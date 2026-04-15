@@ -21,8 +21,10 @@
 - A NixOS minimal ISO (x86_64) available in Proxmox storage
   - Download from the official NixOS website
   - Upload via: Proxmox → Node → Storage → ISO Images → Upload
-
-    
+- Cloudflare account with a domain added
+- cloudflared installed and configured on a machine in your network
+  - `cloudflared tunnel login` completed
+  - A tunnel created (`cloudflared tunnel create <name>`)
 
 ---
 
