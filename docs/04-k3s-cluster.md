@@ -49,3 +49,11 @@ k8s-master     Ready    control-plane   Xh    v1.34.x+k3s1
 k8s-worker-1   Ready    <none>          Xm    v1.34.x+k3s1
 k8s-worker-2   Ready    <none>          Xm    v1.34.x+k3s1
 ```
+
+## Verify system pods
+
+```bash
+kubectl get pods --all-namespaces
+```
+
+All pods should show `Running`. The k3s embedded components (CoreDNS, local-path-provisioner, metrics-server) start automatically.
