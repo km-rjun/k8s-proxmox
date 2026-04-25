@@ -57,3 +57,15 @@ kubectl get pods --all-namespaces
 ```
 
 All pods should show `Running`. The k3s embedded components (CoreDNS, local-path-provisioner, metrics-server) start automatically.
+
+## kubectl without sudo
+
+The kubeconfig is at `/etc/rancher/k3s/k3s.yaml`. We declare it as a permanent environment variable in `configuration.nix`:
+
+```nix
+environment.sessionVariables = {
+  KUBECONFIG = "/etc/rancher/k3s/k3s.yaml";
+};
+```
+
+This means `kubectl` works without `sudo` or any manual exports in every shell session.
