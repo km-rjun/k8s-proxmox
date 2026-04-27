@@ -17,6 +17,17 @@ kubectl get pods -n ingress-nginx
 kubectl get svc -n ingress-nginx
 ```
 
+Expected pods:
+- `ingress-nginx-admission-create` — `Completed` (one-time setup job)
+- `ingress-nginx-admission-patch` — `Completed` (one-time setup job)
+- `ingress-nginx-controller` — `Running`
+
+Expected service:
+```
+NAME                       TYPE       CLUSTER-IP     EXTERNAL-IP    PORT(S)
+ingress-nginx-controller   NodePort   10.43.x.x      10.0.0.131,10.0.0.132   80:xxxxx/TCP,443:xxxxx/TCP
+```
+
 ## Expose on standard ports via externalIPs
 
 By default the baremetal install uses random high NodePorts (e.g. `80:31913`). We patch the service to also listen on the standard ports 80 and 443 via `externalIPs`:
