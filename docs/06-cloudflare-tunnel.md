@@ -36,7 +36,7 @@ ingress:
   # existing services stay here
 
   - hostname: myapp.yourdomain.com
-    service: http://<ip-address>
+    service: http://<ip-address> # Enter IP address of worker node
 
   # catch-all — must always be last
   - service: http_status:404
