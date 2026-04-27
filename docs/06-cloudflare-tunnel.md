@@ -70,3 +70,10 @@ Clean up after verifying:
 ```bash
 kubectl delete -f manifests/test-app/test-app.yaml
 ```
+
+## Security notes
+
+- Cloudflare Tunnel means zero inbound ports are open on your network
+- Cloudflare provides DDoS protection and WAF (Web Application Firewall) for free at the edge
+- All traffic between Cloudflare and your tunnel is encrypted
+- You can add Cloudflare Access in front of any service for zero-trust authentication
