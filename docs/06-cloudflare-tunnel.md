@@ -10,6 +10,10 @@ Browser → Cloudflare Edge → Cloudflare Tunnel (outbound) → NGINX Ingress �
 
 `cloudflared` runs on a machine in your network and creates a persistent outbound connection to Cloudflare. Cloudflare routes all traffic for your domain through this tunnel — no inbound ports, no port forwarding, no public IP needed.
 
+## Why route through NGINX and not directly to services?
+
+Routing tunnel traffic through NGINX ingress gives you full routing control inside the cluster. You can host multiple services on different subdomains, add TLS, rate limiting, authentication, and other NGINX annotations — all from inside the cluster without touching the tunnel config.
+
 ## Prerequisites
 
 - A Cloudflare account with your domain added
