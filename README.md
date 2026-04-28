@@ -20,6 +20,10 @@ A step-by-step guide to building a production-ready Kubernetes cluster on NixOS 
 
 ## Why this stack
 
+```
+Browser → Cloudflare Edge → Cloudflare Tunnel → NGINX Ingress → pods
+```
+
 - **NixOS** — Entire system config lives in one file, fully reproducible, perfect for documenting and sharing
 - **k3s** — Bundles etcd, API server, scheduler into one binary, handles certs automatically
 - **Cloudflare Tunnel** — Works behind CGNAT, no port forwarding needed, free DDoS protection
