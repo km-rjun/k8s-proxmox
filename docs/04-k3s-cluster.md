@@ -21,6 +21,12 @@ Check the node is ready:
 kubectl get nodes
 ```
 
+Expected output:
+```
+NAME         STATUS   ROLES           AGE   VERSION
+k8s-master   Ready    control-plane   Xm    v1.34.x+k3s1
+```
+
 ## Get the join token
 
 Workers need this token to authenticate and join the cluster:
