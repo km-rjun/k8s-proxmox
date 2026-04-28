@@ -7,6 +7,6 @@
   {
     "op": "add",
     "path": "/spec/externalIPs",
-    "value": ["10.0.0.131", "10.0.0.132"]
+    "value": ["<ip-address1>", "<ip-address2>"] # Enter ip address
   }
 ]
