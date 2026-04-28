@@ -2,6 +2,10 @@
 
 k3s is declared entirely in `configuration.nix` — there are no manual install steps. Once NixOS is installed and booted, k3s starts automatically.
 
+## What is k3s?
+
+k3s is a lightweight Kubernetes distribution that bundles the API server, scheduler, controller manager, etcd, and container runtime into a single binary. It handles TLS certificates automatically and is production-ready.
+
 ## Control plane
 
 After the control plane boots, verify k3s is running:
