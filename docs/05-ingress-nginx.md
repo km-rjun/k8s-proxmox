@@ -58,6 +58,8 @@ From any machine on your network:
 curl -v http://10.0.0.131
 ```
 
+A `404 Not Found` response from nginx means NGINX is working correctly — it just has no ingress rules yet.
+
 ## Writing an Ingress rule
 
 Every service you want to expose needs an `Ingress` object:
