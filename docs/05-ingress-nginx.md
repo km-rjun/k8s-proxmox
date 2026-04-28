@@ -2,6 +2,13 @@
 
 The ingress controller is the front door of the cluster. All external traffic enters through NGINX, which routes it to the correct service based on hostname and path rules.
 
+## Why NGINX and not Traefik?
+
+k3s ships with Traefik by default. We disable it (`--disable=traefik`) and use NGINX instead because:
+- NGINX has wider community adoption and more documentation
+- Annotation-based configuration is more explicit and easier to debug
+- Better compatibility with cert-manager
+
 ## Install
 
 We use the baremetal deploy manifest — not the cloud provider version. The cloud version expects a LoadBalancer to be automatically provisioned by AWS/GCP/Azure. On baremetal/homelab that never happens and the service stays in `Pending` forever.
